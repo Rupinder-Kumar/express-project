@@ -1,2 +1,2 @@
 # express-project
-Express Js Implemented with node js
+Express Js Implemented with node js using MVC pattern
