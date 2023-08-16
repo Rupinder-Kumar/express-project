@@ -20,14 +20,14 @@ app.use((req, res, next) => {
 app.use('/', express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 
+app.use('/friends', friendsRouter);
+app.use('/messages', messagesRouter);
 app.use('/', (req, res) => {
     res.render('index', {
         title: 'My Friends are very clever',
         caption: 'Let\'s got skiing'
     })
-})
-app.use('/friends', friendsRouter);
-app.use('/messages', messagesRouter);
+});
 
 
 app.listen(PORT, () => console.log(`Listening on Port ${PORT}...`))
